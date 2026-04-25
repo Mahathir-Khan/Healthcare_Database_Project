@@ -47,63 +47,44 @@
           <h1 class="view-title">Patient View</h1>
           <section class="top-grid">
             <div class="photo-circle">Patient<br />Photo</div>
-            <div class="patient-name">Name</div>
+            <div class="patient-name" id="dashboard-patient-name">Name</div>
             <div class="info-card">
               <h3>Contact Info</h3>
               <div class="info-line">
-                <span class="info-label">Email:</span> patient@example.com
+                <span class="info-label">Email:</span> <span id="dashboard-email">patient@example.com</span>
               </div>
               <div class="info-line">
-                <span class="info-label">Phone:</span> (555) 123-4567
+                <span class="info-label">Phone:</span> <span id="dashboard-phone">(555) 123-4567</span>
               </div>
               <div class="info-line">
-                <span class="info-label">Birthday:</span> 01/12/2002
+                <span class="info-label">Birthday:</span> <span id="dashboard-dob">01/12/2002</span>
               </div>
               <div class="info-line">
-                <span class="info-label">MRN:</span> 1002457
+                <span class="info-label">MRN:</span> <span id="dashboard-mrn">1002457</span>
               </div>
               <div class="info-line">
-                <span class="info-label">Address:</span> 123 Elm Street
+                <span class="info-label">Address:</span> <span id="dashboard-address">123 Elm Street</span>
               </div>
             </div>
           </section>
 
           <section class="dual-panels">
             <div class="panel table-wrap">
-              <h3>Medications</h3>
+              <h3>My Medication List</h3>
               <table>
                 <thead>
                   <tr>
-                    <th>Order #</th>
-                    <th>Date</th>
+                    <th>Medication</th>
+                    <th>Dosage</th>
+                    <th>Frequency</th>
+                    <th>Prescribed By</th>
                     <th>Status</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>RX-201</td>
-                    <td>2026-04-05</td>
-                    <td>Active</td>
-                  </tr>
-                  <tr>
-                    <td>RX-188</td>
-                    <td>2026-03-18</td>
-                    <td>Completed</td>
-                  </tr>
-                  <tr>
-                    <td>RX-171</td>
-                    <td>2026-03-01</td>
-                    <td>Completed</td>
-                  </tr>
-                  <tr>
-                    <td>RX-162</td>
-                    <td>2026-02-14</td>
-                    <td>Stopped</td>
-                  </tr>
-                </tbody>
+                <tbody id="medication-list"></tbody>
               </table>
-              <div class="button-row">
-                <button type="button">Show all medications</button>
+              <div class="notice">
+                Patients can view active and past medications but cannot prescribe or edit them.
               </div>
             </div>
 

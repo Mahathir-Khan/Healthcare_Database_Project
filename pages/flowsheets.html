@@ -44,34 +44,56 @@
           </header>
 
           <section class="content-card">
+            <h2 id="flowsheets-heading">Patient Vitals</h2>
+            <div class="toolbar provider-only">
+              <label for="flowsheet-patient-filter">Patient</label>
+              <select id="flowsheet-patient-filter" data-patient-select></select>
+            </div>
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>Encounter</th>
+                  <th>Date</th>
+                  <th>Observation</th>
+                  <th>Value</th>
+                  <th>Unit</th>
+                </tr>
+              </thead>
+              <tbody id="observations-table"></tbody>
+            </table>
+            <div class="notice patient-only">
+              Patients can view their own flowsheet values but cannot edit them.
+            </div>
+          </section>
+
+          <section class="content-card provider-only stack-section">
             <h2>Add Observation</h2>
-            <form class="form-grid">
+            <form id="observation-form" class="form-grid">
               <label>
-                Patient Name
-                <input type="text" placeholder="Enter patient name" />
+                Patient
+                <select id="observation-patient" data-patient-select></select>
               </label>
               <label>
                 Observation Code
-                <input type="text" placeholder="e.g. BP, HR, Temp" />
+                <input id="observation-code" type="text" placeholder="e.g. BP, HR, Temp" required />
               </label>
               <label>
                 Value
-                <input type="text" placeholder="e.g. 120/80" />
+                <input id="observation-value" type="text" placeholder="e.g. 120/80" required />
               </label>
               <label>
                 Unit
-                <input type="text" placeholder="e.g. mmHg" />
+                <input id="observation-unit" type="text" placeholder="e.g. mmHg" required />
               </label>
               <label>
                 Recorded At
-                <input type="datetime-local" />
+                <input id="observation-time" type="datetime-local" required />
               </label>
               <div class="form-actions">
-                <button type="button" class="primary-btn">
-                  Save Observation
-                </button>
+                <button type="submit">Save observation</button>
               </div>
             </form>
+            <div id="observation-status" class="notice"></div>
           </section>
         </main>
       </div>

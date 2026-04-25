@@ -44,7 +44,11 @@
           </header>
 
           <section class="content-card">
-            <h2>Upcoming Appointments</h2>
+            <h2 id="appointments-heading">Upcoming Appointments</h2>
+            <div class="toolbar provider-only">
+              <label for="appointment-patient-filter">Patient</label>
+              <select id="appointment-patient-filter" data-patient-select></select>
+            </div>
             <table class="styled-table">
               <thead>
                 <tr>
@@ -55,30 +59,42 @@
                   <th>Type</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Apr 25, 2026</td>
-                  <td>9:00 AM</td>
-                  <td>John Doe</td>
-                  <td>Dr. Smith</td>
-                  <td>Follow-up</td>
-                </tr>
-                <tr>
-                  <td>Apr 25, 2026</td>
-                  <td>11:30 AM</td>
-                  <td>Sarah Khan</td>
-                  <td>Dr. Patel</td>
-                  <td>New Visit</td>
-                </tr>
-                <tr>
-                  <td>Apr 26, 2026</td>
-                  <td>2:00 PM</td>
-                  <td>Michael Lee</td>
-                  <td>Dr. Smith</td>
-                  <td>Consultation</td>
-                </tr>
-              </tbody>
+              <tbody id="appointments-table"></tbody>
             </table>
+          </section>
+
+          <section class="content-card patient-only stack-section">
+            <h2>Request Appointment</h2>
+            <form id="appointment-request-form" class="form-grid">
+              <label>
+                Specialty
+                <select id="appointment-specialty">
+                  <option value="Primary Care">Primary Care</option>
+                  <option value="Oncology">Oncology</option>
+                  <option value="Hematology">Hematology</option>
+                </select>
+              </label>
+              <label>
+                Provider
+                <select id="appointment-provider"></select>
+              </label>
+              <label>
+                Date
+                <input id="appointment-date" type="date" required />
+              </label>
+              <label>
+                Time
+                <input id="appointment-time" type="time" required />
+              </label>
+              <label class="full">
+                Reason for visit
+                <textarea id="appointment-reason" placeholder="Briefly describe what you need help with"></textarea>
+              </label>
+              <div class="form-actions">
+                <button type="submit">Request appointment</button>
+              </div>
+            </form>
+            <div id="appointment-request-status" class="notice"></div>
           </section>
         </main>
       </div>

@@ -40,17 +40,19 @@
         <main class="content">
         <header class="page-header">
           <h1>Profile</h1>
-          <p>Healthcare staff profile and account details.</p>
+          <p id="profile-summary">Account details and access level.</p>
         </header>
 
         <section class="content-card profile-card">
-          <div class="profile-avatar">👨‍⚕️</div>
+          <div class="profile-avatar" id="profile-avatar">◌</div>
           <div class="profile-info">
-            <h2>Dr. James Smith</h2>
-            <p><strong>Role:</strong> Primary Care Provider</p>
-            <p><strong>Department:</strong> Internal Medicine</p>
-            <p><strong>Email:</strong> jsmith@smartchart.org</p>
-            <p><strong>License No:</strong> MD-10452</p>
+            <h2 id="profile-name">Profile</h2>
+            <p><strong>Role:</strong> <span id="profile-role"></span></p>
+            <p><strong>Access Level:</strong> <span id="profile-access"></span></p>
+            <p><strong>Member ID:</strong> <input id="profile-member-id" type="text" readonly /></p>
+            <p><strong>Email:</strong> <input id="profile-email" type="email" /></p>
+            <p><strong>Phone:</strong> <input id="profile-phone" type="text" /></p>
+            <p class="notice">Member ID is read-only to reflect access control rules.</p>
           </div>
         </section>
         </main>
