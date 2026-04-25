@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartChart - Patient View</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="brand">SmartChart</div>
+          <a
+            class="nav-item active"
+            id="dashboard-link"
+            href="patient.html?role=patient"
+            ><span class="nav-icon">▣</span>Dashboard</a
+          >
+          <a class="nav-item" id="profile-link" href="profile.html?role=patient"
+            ><span class="nav-icon">◌</span>Profile</a
+          >
+          <a
+            class="nav-item"
+            id="appointments-link"
+            href="appointments.html?role=patient"
+            ><span class="nav-icon">🗓</span>Appointments</a
+          >
+          <a
+            class="nav-item"
+            id="flowsheets-link"
+            href="flowsheets.html?role=patient"
+            ><span class="nav-icon">📝</span>Flowsheets</a
+          >
+          <a
+            class="nav-item"
+            id="messages-link"
+            href="messages.html?role=patient"
+            ><span class="nav-icon">✉</span>Messages</a
+          >
+          <a class="nav-item" href="index.html"
+            ><span class="nav-icon">⇦</span>Logout</a
+          >
+        </aside>
+        <main class="content">
+          <h1 class="view-title">Patient View</h1>
+          <section class="top-grid">
+            <div class="photo-circle">Patient<br />Photo</div>
+            <div class="patient-name">Name</div>
+            <div class="info-card">
+              <h3>Contact Info</h3>
+              <div class="info-line">
+                <span class="info-label">Email:</span> patient@example.com
+              </div>
+              <div class="info-line">
+                <span class="info-label">Phone:</span> (555) 123-4567
+              </div>
+              <div class="info-line">
+                <span class="info-label">Birthday:</span> 01/12/2002
+              </div>
+              <div class="info-line">
+                <span class="info-label">MRN:</span> 1002457
+              </div>
+              <div class="info-line">
+                <span class="info-label">Address:</span> 123 Elm Street
+              </div>
+            </div>
+          </section>
+
+          <section class="dual-panels">
+            <div class="panel table-wrap">
+              <h3>Medications</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Order #</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>RX-201</td>
+                    <td>2026-04-05</td>
+                    <td>Active</td>
+                  </tr>
+                  <tr>
+                    <td>RX-188</td>
+                    <td>2026-03-18</td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>RX-171</td>
+                    <td>2026-03-01</td>
+                    <td>Completed</td>
+                  </tr>
+                  <tr>
+                    <td>RX-162</td>
+                    <td>2026-02-14</td>
+                    <td>Stopped</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="button-row">
+                <button type="button">Show all medications</button>
+              </div>
+            </div>
+
+            <div class="panel table-wrap">
+              <h3>Encounters</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Department</th>
+                    <th>Provider</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2026-04-05</td>
+                    <td>Oncology</td>
+                    <td>Dr. Patel</td>
+                  </tr>
+                  <tr>
+                    <td>2026-03-18</td>
+                    <td>Hematology</td>
+                    <td>Dr. Kim</td>
+                  </tr>
+                  <tr>
+                    <td>2026-02-14</td>
+                    <td>Primary Care</td>
+                    <td>Dr. Barnes</td>
+                  </tr>
+                  <tr>
+                    <td>2026-01-30</td>
+                    <td>Radiology</td>
+                    <td>Dr. Shah</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="button-row">
+                <button type="button">Show all encounters</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" style="margin-top: 18px">
+            <h3>Message Provider</h3>
+            <form data-message="Message form captured locally.">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="subject">Subject</label>
+                  <input
+                    id="subject"
+                    type="text"
+                    placeholder="Medication question"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="recipient">Recipient</label>
+                  <select id="recipient">
+                    <option>Dr. Patel</option>
+                    <option>Dr. Kim</option>
+                    <option>Dr. Barnes</option>
+                  </select>
+                </div>
+                <div class="form-field full">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    placeholder="Type your question here..."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="button-row">
+                <button type="submit">Send message</button>
+              </div>
+            </form>
+            <div class="notice">
+              This page is static for Task B, so buttons demonstrate interface
+              flow only.
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

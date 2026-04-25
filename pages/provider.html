@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartChart - Provider View</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="brand">SmartChart</div>
+          <a
+            class="nav-item active"
+            id="dashboard-link"
+            href="provider.html?role=provider"
+            ><span class="nav-icon">🩺</span>Dashboard</a
+          >
+          <a
+            class="nav-item"
+            id="profile-link"
+            href="profile.html?role=provider"
+            ><span class="nav-icon">◌</span>Profile</a
+          >
+          <a
+            class="nav-item"
+            id="appointments-link"
+            href="appointments.html?role=provider"
+            ><span class="nav-icon">🗓</span>Appointments</a
+          >
+          <a
+            class="nav-item"
+            id="flowsheets-link"
+            href="flowsheets.html?role=provider"
+            ><span class="nav-icon">📝</span>Flowsheets</a
+          >
+          <a
+            class="nav-item"
+            id="messages-link"
+            href="messages.html?role=provider"
+            ><span class="nav-icon">✉</span>Messages</a
+          >
+          <a class="nav-item" href="index.html"
+            ><span class="nav-icon">⇦</span>Logout</a
+          >
+        </aside>
+        <main class="content">
+          <h1 class="view-title">Provider View</h1>
+          <section class="top-grid">
+            <div class="photo-circle">Patient<br />Photo</div>
+            <div class="patient-name">Name</div>
+            <div class="info-card">
+              <h3>Contact Info</h3>
+              <div class="info-line">
+                <span class="info-label">Email:</span> patient@example.com
+              </div>
+              <div class="info-line">
+                <span class="info-label">Phone:</span> (555) 123-4567
+              </div>
+              <div class="info-line">
+                <span class="info-label">Birthday:</span> 01/12/2002
+              </div>
+              <div class="info-line">
+                <span class="info-label">MRN:</span> 1002457
+              </div>
+              <div class="info-line">
+                <span class="info-label">Address:</span> 123 Elm Street
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" style="margin-bottom: 18px">
+            <h3>Flowsheets</h3>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-head">Current Encounter</div>
+                <div class="metric-body">
+                  <ul class="metric-list">
+                    <li>Height: 5'10"</li>
+                    <li>Weight: 168 lb</li>
+                    <li>Temp: 98.6°F</li>
+                    <li>SpO2: 98%</li>
+                    <li>Heart Rate: 76 bpm</li>
+                    <li>Blood Pressure: 118/76</li>
+                    <li>Pain: 2/10</li>
+                    <li>Additional Comments: Mild fatigue</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-head">
+                  Average Vitals of Last 5 Encounters
+                </div>
+                <div class="metric-body">
+                  <ul class="metric-list">
+                    <li>Height: 5'10"</li>
+                    <li>Weight: 170 lb</li>
+                    <li>Temp: 98.5°F</li>
+                    <li>SpO2: 97%</li>
+                    <li>Heart Rate: 79 bpm</li>
+                    <li>Blood Pressure: 120/78</li>
+                    <li>Pain: 3/10</li>
+                    <li>Additional Comments: Stable trend</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dual-panels">
+            <div class="form-card panel">
+              <h3>Add Observation</h3>
+              <form data-message="Observation form captured locally.">
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="obs-code">Observation Code</label>
+                    <input id="obs-code" type="text" placeholder="BP_SYS" />
+                  </div>
+                  <div class="form-field">
+                    <label for="obs-value">Value</label>
+                    <input id="obs-value" type="text" placeholder="118" />
+                  </div>
+                  <div class="form-field">
+                    <label for="obs-unit">Unit</label>
+                    <input id="obs-unit" type="text" placeholder="mmHg" />
+                  </div>
+                  <div class="form-field">
+                    <label for="obs-time">Recorded At</label>
+                    <input id="obs-time" type="datetime-local" />
+                  </div>
+                </div>
+                <div class="button-row">
+                  <button type="submit">Save observation</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="form-card panel">
+              <h3>Create Prescription</h3>
+              <form data-message="Prescription form captured locally.">
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="medication">Medication</label>
+                    <select id="medication">
+                      <option>Imatinib</option>
+                      <option>Ondansetron</option>
+                      <option>Prednisone</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label for="dosage">Dosage</label>
+                    <input id="dosage" type="text" placeholder="400 mg" />
+                  </div>
+                  <div class="form-field">
+                    <label for="frequency">Frequency</label>
+                    <input
+                      id="frequency"
+                      type="text"
+                      placeholder="Once daily"
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label for="status">Status</label>
+                    <select id="status">
+                      <option>Active</option>
+                      <option>Pending</option>
+                      <option>Stopped</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label for="start-date">Start Date</label>
+                    <input id="start-date" type="date" />
+                  </div>
+                  <div class="form-field">
+                    <label for="end-date">End Date</label>
+                    <input id="end-date" type="date" />
+                  </div>
+                </div>
+                <div class="button-row">
+                  <button type="submit">Submit prescription</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
