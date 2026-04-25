@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const role = document.getElementById("role").value;
 
       if (role === "patient") {
-        window.location.href = "patient.html?role=patient";
+        window.location.href = "pages/patient.html?role=patient";
       } else if (role === "provider") {
-        window.location.href = "provider.html?role=provider";
+        window.location.href = "pages/provider.html?role=provider";
       }
     });
   }

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartChart - Login</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <div class="page-shell">
@@ -17,7 +17,12 @@
           <form id="login-form">
             <div class="form-field">
               <label for="username">Username</label>
-              <input id="username" type="text" placeholder="Enter username" />
+              <input
+                id="username"
+                type="text"
+                placeholder="Enter username"
+                required
+              />
             </div>
 
             <div class="form-field">
@@ -26,15 +31,15 @@
                 id="password"
                 type="password"
                 placeholder="Enter password"
+                required
               />
             </div>
 
             <div class="form-field">
               <label for="role">Role</label>
-              <select id="role">
+              <select id="role" required>
                 <option value="patient">Patient</option>
                 <option value="provider">Provider</option>
-                <option value="admin">Admin</option>
               </select>
             </div>
 
@@ -43,7 +48,7 @@
             </div>
           </form>
 
-          <p class="notice">Prototype login for Task B interface only.</p>
+          <div class="notice">Prototype login for Task B only.</div>
         </div>
       </div>
     </div>
